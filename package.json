@@ -1,0 +1,19 @@
+{
+  "name": "roller-chain-calc",
+  "version": "1.0.0",
+  "description": "Roller chain drive geometry calculator",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "roller-chain-calc": "dist/bin.js" },
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node test/calculator.test.js",
+    "start": "node dist/bin.js",
+    "prepack": "npm run build"
+  },
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.7.0" }
+}
